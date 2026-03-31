@@ -99,6 +99,7 @@ if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 ?>
+```
 
 Fungsi:
 Menghubungkan website dengan database MySQL
