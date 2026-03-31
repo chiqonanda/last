@@ -104,3 +104,124 @@ if (!$conn) {
 Fungsi:
 Menghubungkan website dengan database MySQL
 Digunakan di semua file PHP
+
+2. 📄 index.php
+```php
+<?php
+include 'conn.php';
+
+$profile = mysqli_query($conn, "SELECT * FROM profile LIMIT 1");
+$data = mysqli_fetch_assoc($profile);
+
+$skills = mysqli_query($conn, "SELECT * FROM skills");
+$certificates = mysqli_query($conn, "SELECT * FROM certificates");
+?>
+```
+Penjelasan:
+
+Mengambil data profile dari database
+Mengambil data skills
+Mengambil data certificates
+Data ditampilkan menggunakan PHP echo dan looping
+🔁 Contoh Looping Skills
+```php
+<?php while($skill = mysqli_fetch_assoc($skills)) { ?>
+  <div class="mb-3">
+    <label><?php echo $skill['name']; ?></label>
+    <div class="progress">
+      <div class="progress-bar" style="width: <?php echo $skill['level']; ?>%"></div>
+    </div>
+  </div>
+<?php } ?>
+```
+🖼️ Contoh Menampilkan Gambar
+```
+<img src="assets/<?php echo $cert['image']; ?>">
+```
+
+Penjelasan:
+
+- Database hanya menyimpan nama file
+- Gambar diambil dari folder assets
+
+---
+
+3. 🎨 style.css
+
+Digunakan untuk mengatur tampilan website:
+
+- Dark gradient background
+- Neon purple accent
+- Card glass effect (blur)
+- Progress bar custom
+- Responsive layout
+
+---
+
+🗄️ E. Struktur Database
+📌 Database: portfolio_db
+Table: profile
+- id
+- name
+- description
+- about
+- image
+Table: skills
+- id
+- name
+- level
+Table: certificates
+- id
+- title
+- issuer
+- image
+---
+📂 F. Struktur Project
+``` minpro2/
+│
+├── index.php
+├── conn.php
+├── style.css
+├── assets/
+│   ├── disini.jpeg
+│   ├── image.png
+│   ├── 6.png
+│   └── lainnya...
+└── README.md
+```
+---
+🛠️ G. Teknologi yang Digunakan
+HTML5
+CSS3
+Bootstrap 5
+PHP (Native)
+MySQL
+Google Fonts
+
+🏆 H. Hasil Pembelajaran
+
+Melalui project ini, saya mempelajari:
+
+- Mengubah website statis menjadi dinamis
+- Menggunakan PHP untuk mengambil data dari database
+- Menghubungkan MySQL dengan website
+- Menggunakan looping PHP (while)
+- Menampilkan data dinamis ke UI
+- Mengelola struktur project web
+  
+---
+
+📌 Catatan
+Website tidak menggunakan template
+Semua layout dibuat manual
+Data diambil langsung dari database
+Gambar disimpan di folder assets
+
+---
+
+👨‍💻 Author
+
+Chiqo Nanda Rial Pratama
+Mahasiswa Sistem Informasi
+Universitas Mulawarman
+Tahun 2026
