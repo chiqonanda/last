@@ -1,0 +1,129 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+  color: #f3e8ff;
+  background: radial-gradient(circle at 20% 20%, #1a0033, #0b0014 70%);
+}
+
+/* ===== FULL PAGE SECTION ===== */
+.full-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+  background: rgba(10, 0, 20, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #c084fc !important;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  padding: 0;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.accent {
+  color: #a855f7;
+  text-shadow: 0 0 20px rgba(168,85,247,0.8);
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e9d5ff;
+}
+
+/* ===== SECTION TITLE ===== */
+h2 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #c084fc;
+}
+
+/* ===== PROGRESS ===== */
+.custom-progress {
+  background: rgba(255,255,255,0.05);
+  height: 10px;
+  border-radius: 20px;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #7c3aed, #3b82f6);
+  box-shadow: 0 0 15px rgba(124,58,237,0.8);
+  border-radius: 20px;
+}
+
+/* ===== ALT SECTION ===== */
+.bg-dark-alt {
+  background: linear-gradient(180deg, #140022, #0b0014);
+}
+
+/* ===== CARD ===== */
+.custom-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(139,92,246,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: 0.3s;
+  color: #f5d0fe;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(168,85,247,0.6);
+  border-color: #a855f7;
+}
+
+/* ===== BUTTON ===== */
+.btn-accent {
+  background: linear-gradient(45deg, #7c3aed, #a855f7);
+  border: none;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(168,85,247,0.6);
+}
+
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(168,85,247,0.9);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cert-img {
+  height: 200px;
+  object-fit: contain;
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0b0014;
+  color: #c084fc;
+  font-weight: 600;
+}
